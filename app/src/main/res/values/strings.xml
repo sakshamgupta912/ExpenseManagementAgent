@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Expense Manager</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    
+    <!-- Main Activity -->
+    <string name="dashboard">Dashboard</string>
+    <string name="expenses">Expenses</string>
+    <string name="categories">Categories</string>
+    <string name="reports">Reports</string>
+    <string name="settings">Settings</string>
+    
+    <!-- Add Expense -->
+    <string name="add_expense">Add Expense</string>
+    <string name="amount">Amount</string>
+    <string name="description">Description</string>
+    <string name="category">Category</string>
+    <string name="date">Date</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    
+    <!-- Expense Categories -->
+    <string name="food_dining">Food &amp; Dining</string>
+    <string name="transportation">Transportation</string>
+    <string name="shopping">Shopping</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="bills_utilities">Bills &amp; Utilities</string>
+    <string name="healthcare">Healthcare</string>
+    <string name="travel">Travel</string>
+    <string name="other">Other</string>
+    
+    <!-- OCR and AI -->
+    <string name="scan_receipt">Scan Receipt</string>
+    <string name="camera_permission_required">Camera permission is required to scan receipts</string>
+    <string name="processing_receipt">Processing receipt...</string>
+    <string name="ai_suggestion">AI Suggestion</string>
+    
+    <!-- Dashboard -->
+    <string name="total_expenses">Total Expenses</string>
+    <string name="this_month">This Month</string>
+    <string name="recent_expenses">Recent Expenses</string>
+    
+    <!-- Reports -->
+    <string name="monthly_report">Monthly Report</string>
+    <string name="category_breakdown">Category Breakdown</string>
+    <string name="spending_trends">Spending Trends</string>
+</resources>
