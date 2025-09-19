@@ -26,8 +26,10 @@ class ExpenseRepository(
     suspend fun getTotalExpensesByDateRange(startDate: Date, endDate: Date): Double = 
         expenseDao.getTotalExpensesByDateRange(startDate, endDate) ?: 0.0
     
-    suspend fun getCategoryTotalsByDateRange(startDate: Date, endDate: Date): Map<String, Double> = 
-        expenseDao.getCategoryTotalsByDateRange(startDate, endDate)
+    suspend fun getCategoryTotalsByDateRange(startDate: Date, endDate: Date): Map<String, Double> {
+        val categoryTotals = expenseDao.getCategoryTotalsByDateRange(startDate, endDate)
+        return categoryTotals.associate { it.category to it.total }
+    }
     
     suspend fun insertExpense(expense: Expense): Long = expenseDao.insertExpense(expense)
     

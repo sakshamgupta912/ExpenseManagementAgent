@@ -5,6 +5,11 @@ import androidx.room.*
 import com.expensemanagement.agent.data.model.Expense
 import java.util.Date
 
+data class CategoryTotal(
+    val category: String,
+    val total: Double
+)
+
 @Dao
 interface ExpenseDao {
     @Query("SELECT * FROM expenses ORDER BY date DESC")
@@ -23,7 +28,7 @@ interface ExpenseDao {
     suspend fun getTotalExpensesByDateRange(startDate: Date, endDate: Date): Double?
     
     @Query("SELECT category, SUM(amount) as total FROM expenses WHERE date BETWEEN :startDate AND :endDate GROUP BY category")
-    suspend fun getCategoryTotalsByDateRange(startDate: Date, endDate: Date): Map<String, Double>
+    suspend fun getCategoryTotalsByDateRange(startDate: Date, endDate: Date): List<CategoryTotal>
     
     @Insert
     suspend fun insertExpense(expense: Expense): Long
